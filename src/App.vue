@@ -1,85 +1,135 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import Card from './components/Card.vue'
+
+export default {
+  components: {
+    Card,
+  },
+  mounted() {
+    this.lastVisibleRow = this.grid.length - 1;
+    setTimeout(() => {
+      this.flipRow(this.grid.length - 1);
+    }, 100); 
+  },
+  methods: {
+    flipRow(row) {
+       for (var cell in this.grid[0]) {
+        this.flip(row, cell);
+      }
+    },
+    flip(x, y) {
+      this.grid[x][y].flipped = !this.grid[x][y].flipped;
+    },
+    fadeOut(x, y) {
+      this.grid[x][y].visible = false;
+    },
+    async selectCard(x, y) {
+      console.log(x, y);
+      if (x != this.lastVisibleRow) {
+          return; 
+      }
+
+      if (!this.locked) {
+        this.locked = true;
+
+        for (var row in this.grid) {
+          this.fadeOut(row, y);
+        }
+
+        await new Promise(r => setTimeout(r, 500));
+  
+        for (var card in this.grid[this.lastVisibleRow]) {
+          this.fadeOut(this.lastVisibleRow, card);
+        }
+        this.lastVisibleRow--;
+        await new Promise(r => setTimeout(r, 500));
+ 
+        this.flipRow(this.lastVisibleRow);
+      }
+      this.locked = false;
+    },
+  },
+  data() {
+    return {
+      lastVisibleRow: 0,
+      locked: false,
+      grid: [
+        [
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+        ],
+        [
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+        ],
+        [
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+        ],
+        [
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+        ],
+        [
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+        ],
+        
+      ]
+    };
+  },
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="grid">
+    <div v-for="(row, x) in grid" class="row">
+      <div v-for="(cell, y) in row" class="column">
+        <card :isFlipped="cell.flipped" 
+              :isVisible="cell.visible" 
+              :label="[x, y]"
+              @click="selectCard(x, y)">
+          <template v-slot:front>
+            <!-- put your shitty front code here -->
+            <p>front</p>
+          </template>
+          <template v-slot:back>
+            <!-- put your shitty back code here -->
+            <p>back</p>
+          </template>
+        </card>
+      </div>
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+.grid {
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.row {
+  display: flex;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.column {
+  flex: 1;
 }
 </style>
+
