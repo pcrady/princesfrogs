@@ -4,10 +4,11 @@
       <div class="card" :class="{ 'is-flipped': isFlipped }">
         <div class="card__face card__face--front">
           <div v-if="cardType === 1" class="card-type-1-front">
-            <i class="fa-solid fa-10x fa-rotate-270" style="color: #ffb302;">&#xf521;</i>
+            <i class="crown-small fa-solid fa-4x" style="color: #ffb302;">&#xf521;</i>
+            <i class="crown-large fa-solid fa-10x fa-rotate-270" style="color: #ffb302;">&#xf521;</i>
          </div>
           <div v-else-if="cardType === 2" class="card-type-2-front">
-            <i class="fa-solid fa-10x fa-rotate-270" style="color: #ffb302;">&#xf521;</i>
+          
           </div>
         </div>
         <div class="card__face card__face--back">
@@ -41,6 +42,7 @@ export default {
   height: 245px;
   perspective: 600px;
   padding: 1em;
+  overflow: hidden;
 }
 
 .card {
@@ -63,7 +65,8 @@ export default {
   background-color: #e0d35b;
   padding: 10px; 
   border: 1px solid black;
-  box-shadow: inset 0 0 0 10px #ffb302/*#FFD700;*/
+  box-shadow: inset 0 0 0 10px #ffb302;
+  overflow: hidden;
 }
 
 .card__face--front {
@@ -91,6 +94,19 @@ export default {
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.crown-small {
+  rotate: -45deg;
+  position: absolute;
+  left: -15px;
+  top: 45px;
+}
+
+.crown-large {
+  position: relative;
+  right: 0px;
+  top: 40px;
 }
 
 .card-type-1-front {
