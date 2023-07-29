@@ -55,15 +55,8 @@ export default {
       locked: false,
       grid: [
         [
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-        ],
-        [
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true, 'frontLabel':"fdskjh", 'cardType':1},
+          {'flipped': false, 'visible': true, 'cardType': 2},
           {'flipped': false, 'visible': true},
           {'flipped': false, 'visible': true},
           {'flipped': false, 'visible': true},
@@ -88,6 +81,13 @@ export default {
           {'flipped': false, 'visible': true},
           {'flipped': false, 'visible': true},
           {'flipped': false, 'visible': true},
+        ],
+        [
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true, 'cardType': 2},
         ],
         
       ]
@@ -101,13 +101,10 @@ export default {
     <div v-for="(row, x) in grid" class="row">
       <div v-for="(cell, y) in row" class="column">
         <card :isFlipped="cell.flipped" 
-              :isVisible="cell.visible" 
-              :label="[x, y]"
+              :isVisible="cell.visible"
+              :frontLabel="cell.frontLabel"
+              :cardType="cell.cardType"
               @click="selectCard(x, y)">
-          <template v-slot:front>
-            <!-- put your shitty front code here -->
-            <p>front</p>
-          </template>
           <template v-slot:back>
             <!-- put your shitty back code here -->
             <p>back</p>

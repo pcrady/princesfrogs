@@ -3,12 +3,20 @@
     <div class="scene face-component" v-if="isVisible">
       <div class="card" :class="{ 'is-flipped': isFlipped }">
         <div class="card__face card__face--front">
-          <slot name="front"></slot>
-          <p>{{ label }}</p>
+          <div v-if="cardType === 1" class="card-type-1-front">
+            <i class="fa-solid fa-10x fa-rotate-270" style="color: #ffb302;">&#xf521;</i>
+         </div>
+          <div v-else-if="cardType === 2" class="card-type-2-front">
+            <i class="fa-solid fa-10x fa-rotate-270" style="color: #ffb302;">&#xf521;</i>
+          </div>
         </div>
         <div class="card__face card__face--back">
-          <slot name="back"></slot>
-          <p>{{ label }}</p>
+          <div v-if="cardType === 1" class="card-type-1-back">
+              <p>THIS IS CARD TYPE 1</p>
+          </div>
+          <div v-else-if="cardType === 2" class="card-type-2-back">
+              <p>THIS IS CARD TYPE 2</p>
+          </div>
         </div>
       </div>
     </div>
@@ -20,7 +28,9 @@ export default {
   props: [
     'isFlipped',
     'isVisible',
-    'label',
+    'frontLabel',
+    'backLabel',
+    'cardType',
   ],
 };
 </script>
@@ -50,10 +60,14 @@ export default {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  background-color: #e0d35b;
+  padding: 10px; 
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 10px #ffb302/*#FFD700;*/
 }
 
 .card__face--front {
-  background-color: #bbb;
+  background-color: #e78e6a;
 }
 
 .card__face--back {
@@ -69,6 +83,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow:hidden;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -77,5 +92,24 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+.card-type-1-front {
+
+}
+
+
+.card-type-2-front {
+
+}
+
+
+.card-type-1-back {
+
+}
+
+.card-type-2-back {
+
+}
+
 </style>
 
