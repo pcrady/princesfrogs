@@ -62,11 +62,11 @@ export default {
           {'flipped': false, 'visible': true, 'cardType':1},
         ],
         [
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
         ],
         [
           {'flipped': false, 'visible': true},
