@@ -410,7 +410,135 @@
                   font-size:small;">
                   His best quality<br>is...</p></div>
           </div>
-          
+          <div v-else-if="cardType === 5" class="card-type-5-front">           
+            <i class="fa-regular" 
+            style="color: #d32d08; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -6px; 
+                  left: -15px;
+                  font-size: 9.5em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #ffb3ab; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -2px; 
+                  left: -11px;
+                  font-size: 9em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #f9866d; 
+                  position: absolute;
+                  rotate: -20deg;
+                  top: 60px; 
+                  left: -10px;
+                  font-size: 8.5em;
+                  ">&#xf186;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 5px; 
+                  left: 65px;
+                  font-size: 2.5em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #fde1db; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 8.5px; 
+                  left: 68px;
+                  font-size: 2.1em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 95px; 
+                  left: 65px;
+                  font-size: 3.5em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #fde1db; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 98px; 
+                  left: 68px;
+                  font-size: 3.1em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 105px; 
+                  left: 25px;
+                  font-size: 1.9em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #fde1db; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 108px; 
+                  left: 27.5px;
+                  font-size: 1.6em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #d32d08; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 150px; 
+                  left: 85px;
+                  font-size: 3em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #ffb3ab; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 153.5px; 
+                  left: 88px;
+                  font-size: 2.6em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 120px; 
+                  left: 35px;
+                  font-size: 1.5em;">&#x2a;
+            </i>
+            <i class="fa-regular" 
+            style="color: #d32d08; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 10px; 
+                  left: 105px;
+                  font-size: 1.5em;">&#x2a;
+            </i>
+            <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 25px;
+              "> 
+                <p style=
+                  "color:#eeeeec;
+                  font-weight: bold;
+                  font-family: Times New Roman;
+                  font-size:small;">
+                  If you saw him in<br>his sports glory<br>he'd be...</p></div>
+          </div>
         </div>
         <div class="card__face card__face--back">
           <div v-if="cardType === 1" class="card-type-1-back">
@@ -418,6 +546,8 @@
           <div v-else-if="cardType === 2" class="card-type-2-back">
           </div>
           <div v-else-if="cardType === 3" class="card-type-3-back">
+          </div>
+          <div v-else-if="cardType === 4" class="card-type-4-back">
           </div>
         </div>
       </div>
@@ -521,6 +651,12 @@ export default {
   height: 100%;
 }
 
+.card-type-5-front {
+  background-color: #ffb3ab;
+  width: 100%;
+  height: 100%;
+}
+
 .card-type-1-back {
 
 }
@@ -539,6 +675,12 @@ export default {
 
 .card-type-4-back {
   background-color: #a1c6fe;
+  width: 100%;
+  height: 100%;
+}
+
+.card-type-5-front {
+  background-color: #ffb3ab;
   width: 100%;
   height: 100%;
 }
