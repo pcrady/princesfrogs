@@ -62,13 +62,6 @@ export default {
           {'flipped': false, 'visible': true, 'cardType':1},
         ],
         [
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-        ],
-        [
           {'flipped': false, 'visible': true, 'cardType':3},
           {'flipped': false, 'visible': true, 'cardType':3},
           {'flipped': false, 'visible': true, 'cardType':3},
@@ -76,11 +69,11 @@ export default {
           {'flipped': false, 'visible': true, 'cardType':3},
         ],
         [
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
-          {'flipped': false, 'visible': true},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2},
         ],
         [
           {'flipped': false, 'visible': true},
@@ -88,6 +81,13 @@ export default {
           {'flipped': false, 'visible': true},
           {'flipped': false, 'visible': true},
           {'flipped': false, 'visible': true},
+        ],
+        [
+          {'flipped': false, 'visible': true, 'cardType':4},
+          {'flipped': false, 'visible': true, 'cardType':4},
+          {'flipped': false, 'visible': true, 'cardType':4},
+          {'flipped': false, 'visible': true, 'cardType':4},
+          {'flipped': false, 'visible': true, 'cardType':4},
         ],
         
       ]

@@ -309,6 +309,107 @@
                   font-size:medium;">
                   You met...</p></div>
           </div>
+          <div v-else-if="cardType === 4" class="card-type-4-front">
+            <span style = "display: inline-block;
+                  transform: scaleX(0.5);">            
+               <i class="fa-solid" 
+               style="color: #599afd; 
+                      position: absolute;
+                      rotate: 10deg;
+                      top: -20px; 
+                      left: -12px;
+                      font-size: 11.5em;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(1.2);">           
+               <i class="fa-solid" 
+               style="color: #599afd; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 60px; 
+                      left: 20px;
+                      font-size: 5em;
+                      ">&#xf004;
+            </i> </span>
+            <span style = "display: inline-block;
+                  transform: scaleX(0.5);">            
+               <i class="fa-solid" 
+               style="color: #bad5fe; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 90px; 
+                      left: 130px;
+                      font-size: 6em;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(0.4);">            
+               <i class="fa-regular" 
+               style="color: #024ec1; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 60px; 
+                      left: -10px;
+                      font-size: 6em;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(.6);">           
+               <i class="fa-solid" 
+               style="color: #bad5fe; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: -15px; 
+                      left: 0px;
+                      font-size: 2em;
+                      ">&#xf004;
+            </i> </span>
+            <span style = "display: inline-block;
+                  transform: scaleX(.6);">           
+               <i class="fa-regular" 
+               style="color: #eeeeec; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: -15px; 
+                      left: 0px;
+                      font-size: 2em;
+                      ">&#xf004;
+            </i> </span>
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 240deg;
+                      width: 45px;
+                      top: 110px; 
+                      left: 0px;">
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 80deg;
+                      width: 60px;
+                      top: 3px; 
+                      left: 83px;">
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 70deg;
+                      width: 65px;
+                      top: 145px; 
+                      left: 75px;">
+              <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 25px;
+              "> 
+                <p style=
+                  "color:#eeeeec;
+                  font-weight: bold;
+                  font-family: Times New Roman;
+                  font-size:small;">
+                  His best quality<br>is...</p></div>
+          </div>
           
         </div>
         <div class="card__face card__face--back">
@@ -414,6 +515,12 @@ export default {
   height: 100%;
 }
 
+.card-type-4-front {
+  background-color: #a1c6fe;
+  width: 100%;
+  height: 100%;
+}
+
 .card-type-1-back {
 
 }
@@ -426,6 +533,12 @@ export default {
 
 .card-type-3-back {
   background-color: #277dfe;
+  width: 100%;
+  height: 100%;
+}
+
+.card-type-4-back {
+  background-color: #a1c6fe;
   width: 100%;
   height: 100%;
 }
