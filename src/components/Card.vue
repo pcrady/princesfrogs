@@ -176,125 +176,127 @@
                 <p style=
                   "color:#eeeeec;
                   font-weight: bold;
-                  font: Times New Roman;
+                  font-family: Times New Roman;
                   font-size:small;">
                   His best quality<br>is...</p></div>
           </div>
-          <div v-else-if="cardType === 3" class="card-type-3-front">
-            <span style = "display: inline-block;
-                  transform: scaleX(1);">            
-               <i class="fa-regular fa-10x" 
-               style="color: #eeeeec; 
-                      position: absolute;
-                      rotate: 10deg;
-                      top: -20px; 
-                      left: -12px;
-                      /* font-size: 11.5em; */
-                      ">&#xf005;
-            </i></span>
-          </div>
-        </div>
-        <div class="card__face card__face--back">
-          <div v-if="cardType === 1" class="card-type-1-back">
-          </div>
-          <div v-else-if="cardType === 2" class="card-type-2-back">
-            <span style = "display: inline-block;
-                  transform: scaleX(0.5);">            
-               <i class="fa-solid" 
-               style="color: #80cd70; 
-                      position: absolute;
-                      rotate: 10deg;
-                      top: -20px; 
-                      left: -12px;
-                      font-size: 11.5em;
-                      opacity: .5;
-                      ">&#xf004;
-            </i></span>
-            <span style = "display: inline-block;
-                  transform: scaleX(1.2);">           
-               <i class="fa-solid" 
-               style="color: #8cb05c; 
-                      position: absolute;
-                      rotate: 15deg;
-                      top: 60px; 
-                      left: 20px;
-                      font-size: 5em;
-                      opacity: .5;
-                      ">&#xf004;
-            </i> </span>
-            <span style = "display: inline-block;
-                  transform: scaleX(0.5);">            
-               <i class="fa-solid" 
-               style="color: #80cd70; 
-                      position: absolute;
-                      rotate: 15deg;
-                      top: 90px; 
-                      left: 130px;
-                      font-size: 6em;
-                      opacity: .5;
-                      ">&#xf004;
-            </i></span>
-            <span style = "display: inline-block;
-                  transform: scaleX(0.4);">            
-               <i class="fa-regular" 
-               style="color: #7fa44f; 
-                      position: absolute;
-                      rotate: 15deg;
-                      top: 60px; 
-                      left: -10px;
-                      font-size: 6em;
-                      opacity: .5;
-                      ">&#xf004;
-            </i></span>
-            <span style = "display: inline-block;
-                  transform: scaleX(.6);">           
-               <i class="fa-solid" 
-               style="color: #8cb05c; 
-                      position: absolute;
-                      rotate: 15deg;
-                      top: -15px; 
-                      left: 0px;
-                      font-size: 2em;
-                      opacity: .5;
-                      ">&#xf004;
-            </i> </span>
-            <span style = "display: inline-block;
-                  transform: scaleX(.6);">           
-               <i class="fa-regular" 
-               style="color: #eeeeec; 
-                      position: absolute;
-                      rotate: 15deg;
-                      top: -15px; 
-                      left: 0px;
-                      font-size: 2em;
-                      opacity: .5;
-                      ">&#xf004;
-            </i> </span>
-            <img src="./icons/spiral(5).png" 
-                 style=" 
-                      position: absolute; 
-                      rotate: 240deg;
-                      opacity: .5;
-                      width: 45px;
-                      top: 110px; 
-                      left: 0px;">
-            <img src="./icons/spiral(5).png" 
-                 style=" 
-                      position: absolute; 
-                      rotate: 80deg;
-                      opacity: .5;
-                      width: 60px;
-                      top: 3px; 
-                      left: 83px;">
-            <img src="./icons/spiral(5).png" 
-                 style=" 
-                      position: absolute; 
-                      rotate: 70deg;
-                      opacity: .5;
-                      width: 65px;
-                      top: 145px; 
-                      left: 75px;">
-              <div 
+          <div v-else-if="cardType === 3" class="card-type-3-front">           
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -6px; 
+                  left: -15px;
+                  font-size: 9.5em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #277dfe; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -2px; 
+                  left: -11px;
+                  font-size: 9em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #a9cbfe; 
+                  position: absolute;
+                  rotate: -20deg;
+                  top: 60px; 
+                  left: -10px;
+                  font-size: 8.5em;
+                  ">&#xf186;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 5px; 
+                  left: 65px;
+                  font-size: 2.5em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #70a9fe; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 8.5px; 
+                  left: 68px;
+                  font-size: 2.1em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 95px; 
+                  left: 65px;
+                  font-size: 3.5em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #70a9fe; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 98px; 
+                  left: 68px;
+                  font-size: 3.1em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 105px; 
+                  left: 25px;
+                  font-size: 1.9em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #70a9fe; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 108px; 
+                  left: 27.5px;
+                  font-size: 1.6em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 150px; 
+                  left: 85px;
+                  font-size: 3em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #277dfe; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 153.5px; 
+                  left: 88px;
+                  font-size: 2.6em;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 120px; 
+                  left: 35px;
+                  font-size: 1.5em;">&#x2a;
+            </i>
+            <i class="fa-regular" 
+            style="color: #a9cbfe; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 10px; 
+                  left: 105px;
+                  font-size: 1.5em;">&#x2a;
+            </i>
+            <div 
               style="
               position:absolute; 
               top: 40px;
@@ -304,8 +306,17 @@
                   "color:#eeeeec;
                   font-weight: bold;
                   font-family: Times New Roman;
-                  font-size:small;">
-                  His best quality<br>is...</p></div>
+                  font-size:medium;">
+                  You met...</p></div>
+          </div>
+          
+        </div>
+        <div class="card__face card__face--back">
+          <div v-if="cardType === 1" class="card-type-1-back">
+          </div>
+          <div v-else-if="cardType === 2" class="card-type-2-back">
+          </div>
+          <div v-else-if="cardType === 3" class="card-type-3-back">
           </div>
         </div>
       </div>
@@ -398,7 +409,9 @@ export default {
 }
 
 .card-type-3-front {
-
+  background-color: #277dfe;
+  width: 100%;
+  height: 100%;
 }
 
 .card-type-1-back {
@@ -412,7 +425,9 @@ export default {
 }
 
 .card-type-3-back {
-
+  background-color: #277dfe;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -421,3 +436,4 @@ export default {
 
 <!-- <a href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by Smashicons - Flaticon</a> -->
 <!-- <a href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by BomSymbols - Flaticon</a> -->
+<!-- <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a> -->
