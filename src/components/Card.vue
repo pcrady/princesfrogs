@@ -542,6 +542,7 @@
         </div>
         <div class="card__face card__face--back">
           <div v-if="cardType === 1" class="card-type-1-back">
+            <p>{{ cardText }}</p>
           </div>
           <div v-else-if="cardType === 2" class="card-type-2-back">
           </div>
@@ -563,6 +564,7 @@ export default {
     'frontLabel',
     'backLabel',
     'cardType',
+    'cardText',
   ],
 };
 </script>

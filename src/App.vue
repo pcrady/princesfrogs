@@ -59,10 +59,10 @@ export default {
           {'flipped': false, 'visible': true, 'cardType':1},
           {'flipped': false, 'visible': true, 'cardType':1},
           {'flipped': false, 'visible': true, 'cardType':1},
-          {'flipped': false, 'visible': true, 'cardType':1},
+          {'flipped': false, 'visible': true, 'cardType':1,  'text': 'fhsjkdhdsjkh'},
         ],
         [
-          {'flipped': false, 'visible': true, 'cardType':3},
+          {'flipped': false, 'visible': true, 'cardType':3, 'text':"when you were bored out"},
           {'flipped': false, 'visible': true, 'cardType':3},
           {'flipped': false, 'visible': true, 'cardType':3},
           {'flipped': false, 'visible': true, 'cardType':3},
@@ -73,21 +73,21 @@ export default {
           {'flipped': false, 'visible': true, 'cardType':2},
           {'flipped': false, 'visible': true, 'cardType':2},
           {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
+          {'flipped': false, 'visible': true, 'cardType':2,  'text': 'fhsjkdhdsjkh'},
         ],
         [
           {'flipped': false, 'visible': true, 'cardType': 5},
           {'flipped': false, 'visible': true, 'cardType': 5},
           {'flipped': false, 'visible': true, 'cardType': 5},
           {'flipped': false, 'visible': true, 'cardType': 5},
-          {'flipped': false, 'visible': true, 'cardType': 5},
+          {'flipped': false, 'visible': true, 'cardType': 5,  'text': 'fhsjkdhdsjkh'},
         ],
         [
           {'flipped': false, 'visible': true, 'cardType':4},
           {'flipped': false, 'visible': true, 'cardType':4},
           {'flipped': false, 'visible': true, 'cardType':4},
           {'flipped': false, 'visible': true, 'cardType':4},
-          {'flipped': false, 'visible': true, 'cardType':4},
+          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'fhsjkdhdsjkh'},
         ],
         
       ]
@@ -104,6 +104,7 @@ export default {
               :isVisible="cell.visible"
               :frontLabel="cell.frontLabel"
               :cardType="cell.cardType"
+              :cardText="cell.text"
               @click="selectCard(x, y)">
           <template v-slot:back>
             <!-- put your shitty back code here -->
