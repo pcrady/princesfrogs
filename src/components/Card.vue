@@ -175,6 +175,7 @@
               "> 
                 <p style=
                   "color:#eeeeec;
+                  line-height: 1;
                   font-weight: bold;
                   font-family: Times New Roman;
                   font-size:small;">
@@ -405,10 +406,11 @@
               "> 
                 <p style=
                   "color:#eeeeec;
+                  line-height: 1;
                   font-weight: bold;
                   font-family: Times New Roman;
                   font-size:small;">
-                  His best quality<br>is...</p></div>
+                  If your friends<br>met him, they'd<br>tell you...</p></div>
           </div>
           <div v-else-if="cardType === 5" class="card-type-5-front">           
             <i class="fa-regular" 
@@ -534,6 +536,7 @@
               "> 
                 <p style=
                   "color:#eeeeec;
+                  line-height: 1;
                   font-weight: bold;
                   font-family: Times New Roman;
                   font-size:small;">
@@ -542,13 +545,76 @@
         </div>
         <div class="card__face card__face--back">
           <div v-if="cardType === 1" class="card-type-1-back">
-            <p>{{ cardText }}</p>
+            <div><img src="./icons/maddie-and-colt.png"
+              style=" 
+                      position: absolute; 
+                      width: 300px;
+                      top: 0px; 
+                      left: -150px;"
+              ></div>
           </div>
           <div v-else-if="cardType === 2" class="card-type-2-back">
-          </div>
+            <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 15px;
+              "> <pre style=
+                  "color:#eeeeec;
+                  line-height: 1;
+                  font-weight: bold;
+                  font-family: Times New Roman;
+                  white-space: pre-line;
+                  font-size:small;
+                  ">
+                  {{ cardText }}</pre> </div>             </div>
           <div v-else-if="cardType === 3" class="card-type-3-back">
-          </div>
+            <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 15px;
+              "> <pre style=
+                  "color:#eeeeec;
+                  line-height: 1;
+                  font-weight: bold;
+                  font-family: Times New Roman;
+                  white-space: pre-line;
+                  font-size:small;
+                  ">
+                  {{ cardText }}</pre> </div>          
+                </div>
           <div v-else-if="cardType === 4" class="card-type-4-back">
+            <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 15px;
+              "> <pre style=
+                  "color:#eeeeec;
+                  line-height: 1;
+                  font-weight: bold;
+                  font-family: Times New Roman;
+                  white-space: pre-line;
+                  font-size:small;
+                  ">
+                  {{ cardText }}</pre> </div>
+          </div>
+          <div v-else-if="cardType === 5" class="card-type-5-back">
+            <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 15px;
+              "> <pre style=
+                  "color:#eeeeec;
+                  line-height: 1;
+                  font-weight: bold;
+                  font-family: Times New Roman;
+                  white-space: pre-line;
+                  font-size:small;
+                  ">
+                  {{ cardText }}</pre> </div>
           </div>
         </div>
       </div>
@@ -681,7 +747,7 @@ export default {
   height: 100%;
 }
 
-.card-type-5-front {
+.card-type-5-back {
   background-color: #ffb3ab;
   width: 100%;
   height: 100%;

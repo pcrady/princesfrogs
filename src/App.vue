@@ -59,35 +59,35 @@ export default {
           {'flipped': false, 'visible': true, 'cardType':1},
           {'flipped': false, 'visible': true, 'cardType':1},
           {'flipped': false, 'visible': true, 'cardType':1},
-          {'flipped': false, 'visible': true, 'cardType':1,  'text': 'fhsjkdhdsjkh'},
+          {'flipped': false, 'visible': true, 'cardType':1},
         ],
         [
-          {'flipped': false, 'visible': true, 'cardType':3, 'text':"when you were bored out"},
-          {'flipped': false, 'visible': true, 'cardType':3},
-          {'flipped': false, 'visible': true, 'cardType':3},
-          {'flipped': false, 'visible': true, 'cardType':3},
-          {'flipped': false, 'visible': true, 'cardType':3},
+          {'flipped': false, 'visible': true, 'cardType':3, 'text':"at the bus stop - in\n first grade. You had\nbraids and he was\n missing front teeth.\n But it was love at \nfirst sight"},
+          {'flipped': false, 'visible': true, 'cardType':3, 'text': 'when you played\n Juliet and he played\n Romeo. Was that \nfirst kiss just\n acting? The next \nones sure weren\'t'},
+          {'flipped': false, 'visible': true, 'cardType':3, 'text': 'on summer vacation\nat the shoor. Aaggh.\nLong distance phone\n bills'},
+          {'flipped': false, 'visible': true, 'cardType':3, 'text': 'in math class. He\n asked you for help\n with his homework\n and then you moved\n on to other subjects'},
+          {'flipped': false, 'visible': true, 'cardType':3, 'text': 'when you were\n bored out of your\n mind at a wedding\nand he appeared\n out of nowhere\n and asked you\n to dance'},
         ],
         [
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2},
-          {'flipped': false, 'visible': true, 'cardType':2,  'text': 'fhsjkdhdsjkh'},
+          {'flipped': false, 'visible': true, 'cardType':2, 'text':'his confidence.\nHe\'s not a follower\n - he\'s a leader'},
+          {'flipped': false, 'visible': true, 'cardType':2, 'text': 'his strong faith.\n Never swaying, it\n guides his actions\n and the way he\n treats people'},
+          {'flipped': false, 'visible': true, 'cardType':2, 'text':'his muscles. When he\nflexes his biceps you\nget weak in the knees'},
+          {'flipped': false, 'visible': true, 'cardType':2, 'text': 'he\'s a great listener...\nWhen you\'re around\n him you\'re blushing\nbecause you realize\nyou\'ve told him\nEVERYTHING'},
+          {'flipped': false, 'visible': true, 'cardType':2,  'text': 'his sense of humor.\n It\'s contagious. As in,\n no laugh-track\n needed'},
         ],
         [
-          {'flipped': false, 'visible': true, 'cardType': 5},
-          {'flipped': false, 'visible': true, 'cardType': 5},
-          {'flipped': false, 'visible': true, 'cardType': 5},
-          {'flipped': false, 'visible': true, 'cardType': 5},
-          {'flipped': false, 'visible': true, 'cardType': 5,  'text': 'fhsjkdhdsjkh'},
+          {'flipped': false, 'visible': true, 'cardType': 5, 'text': 'jumping up and\n down and cheering\n at a game on TV'},
+          {'flipped': false, 'visible': true, 'cardType': 5, 'text':'barefooting off the\n beach with you\n driving the boat'},
+          {'flipped': false, 'visible': true, 'cardType': 5, 'text': 'checking someone hard in a hockey\n game'},
+          {'flipped': false, 'visible': true, 'cardType': 5, 'text': 'floating on his back\nafter touching first in\nthe 100m fly'},
+          {'flipped': false, 'visible': true, 'cardType': 5,  'text': 'covered in mud after\na vicious mountain\nbike ride'},
         ],
         [
-          {'flipped': false, 'visible': true, 'cardType':4},
-          {'flipped': false, 'visible': true, 'cardType':4},
-          {'flipped': false, 'visible': true, 'cardType':4},
-          {'flipped': false, 'visible': true, 'cardType':4},
-          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'fhsjkdhdsjkh'},
+          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'He may be a cutie,\nbut you need more\nthan just a pretty\nface'},
+          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'Suh -w-e-e-t!'},
+          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'OK, so when are you\ngoing to set us up\nwith his friends?!'},
+          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'Is his homepage\nwww.weirdo.com?'},
+          {'flipped': false, 'visible': true, 'cardType':4, 'text': 'He gives us hope that\nnice, romantic guys\naren\'t just fictional\ncharacters'},
         ],
         
       ]
@@ -97,7 +97,7 @@ export default {
 </script>
 
 <template>
-  <div class="grid">
+  <div class="grid" style="background-color: faf9d0;">
     <div v-for="(row, x) in grid" class="row">
       <div v-for="(cell, y) in row" class="column">
         <card :isFlipped="cell.flipped" 
