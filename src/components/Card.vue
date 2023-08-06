@@ -675,6 +675,7 @@ export default {
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .card.is-flipped {
@@ -690,6 +691,7 @@ export default {
   padding: 10px; 
   border: 1px solid black;
   box-shadow: inset 0 0 0 10px #ffb302;
+  border-radius: 8px;
   overflow: hidden;
 }
 

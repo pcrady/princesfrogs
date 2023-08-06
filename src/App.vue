@@ -5,12 +5,6 @@ export default {
   components: {
     Card,
   },
-  mounted() {
-    this.lastVisibleRow = this.grid.length - 1;
-    setTimeout(() => {
-      this.flipRow(this.grid.length - 1);
-    }, 100); 
-  },
   methods: {
     flipRow(row) {
        for (var cell in this.grid[0]) {
@@ -24,9 +18,14 @@ export default {
       this.grid[x][y].visible = false;
     },
     async selectCard(x, y) {
-      console.log(x, y);
+      if (this.lastVisibleRow === null) {
+        this.lastVisibleRow = this.grid.length - 1;
+        this.flipRow(this.lastVisibleRow);
+        return;
+      }
+
       if (x != this.lastVisibleRow) {
-          return; 
+        return; 
       }
 
       if (!this.locked) {
@@ -56,7 +55,7 @@ export default {
     return {
       showEntryText: true,
       entryText: "This is the entry text you want to display.",
-      lastVisibleRow: 0,
+      lastVisibleRow: null,
       locked: false,
       grid: [
         [
