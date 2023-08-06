@@ -17,6 +17,10 @@ export default {
     fadeOut(x, y) {
       this.grid[x][y].visible = false;
     },
+    async finalMethod() {
+      await new Promise(r => setTimeout(r, 2000));
+      this.showEndStuff = true;  
+    },
     async selectCard(x, y) {
       if (this.lastVisibleRow === null) {
         this.lastVisibleRow = this.grid.length - 1;
@@ -46,6 +50,9 @@ export default {
         this.flipRow(this.lastVisibleRow);
       }
       this.locked = false;
+      if (this.lastVisibleRow === 0) {
+        this.finalMethod();
+      }
     },
     hideEntryText() {
       this.showEntryText = false;
@@ -57,6 +64,7 @@ export default {
       entryText: "This is the entry text you want to display.",
       lastVisibleRow: null,
       locked: false,
+      showEndStuff: false,
       grid: [
         [
           {'flipped': false, 'visible': true, 'cardType':1},
@@ -124,9 +132,14 @@ export default {
         </card>
       </div>
     </div>
+    <div v-if="showEndStuff" style="position:absolute; top:-0px; left:-150px; " class="fade-element">
+        <card :isFlipped="true" 
+              :isVisible="true"
+              :cardType=6></card>
+    </div>
   </div>
-  <a style="color:black; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by Smashicons - Flaticon; </a>
-  <a style="color:black; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by BomSymbols - Flaticon; </a>
+  <a style="color:lightgray; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by Smashicons - Flaticon; </a>
+  <a style="color:lightgray; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by BomSymbols - Flaticon; </a>
 </div>
 </template>
 
@@ -134,6 +147,7 @@ export default {
 .grid {
   display: flex;
   flex-direction: column;
+  position: relative;
   /* background-color: #fa8128; */
 }
 

@@ -1097,6 +1097,15 @@
                   ">
                   {{ cardText }}</pre> </div>
           </div>
+          <div v-if="cardType === 6" class="card-type-1-back">
+            <div><img src="./icons/maddie-and-colt.png"
+              style=" 
+                      position: absolute; 
+                      width: 300px;
+                      top: 0px; 
+                      left: 0px;"
+              ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -1147,7 +1156,6 @@ export default {
   padding: 10px; 
   border: 1px solid black;
   box-shadow: inset 0 0 0 10px #ffb302;
-  border-radius: 8px;
   overflow: hidden;
 }
 
