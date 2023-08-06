@@ -579,6 +579,109 @@
               ></div>
           </div>
           <div v-else-if="cardType === 2" class="card-type-2-back">
+            <span style = "display: inline-block;
+                  transform: scaleX(0.5);">            
+               <i class="fa-solid" 
+               style="color: #80cd70; 
+                      position: absolute;
+                      rotate: 10deg;
+                      top: -20px; 
+                      left: -12px;
+                      font-size: 11.5em;
+                      opacity: .3;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(1.2);">           
+               <i class="fa-solid" 
+               style="color: #8cb05c; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 60px; 
+                      left: 20px;
+                      font-size: 5em;
+                      opacity: .3;
+                      ">&#xf004;
+            </i> </span>
+            <span style = "display: inline-block;
+                  transform: scaleX(0.5);">            
+               <i class="fa-solid" 
+               style="color: #80cd70; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 90px; 
+                      left: 130px;
+                      font-size: 6em;
+                      opacity: .3;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(0.4);">            
+               <i class="fa-regular" 
+               style="color: #7fa44f; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 60px; 
+                      left: -10px;
+                      font-size: 6em;
+                      opacity: .3;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(.6);">           
+               <i class="fa-solid" 
+               style="color: #8cb05c; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: -15px; 
+                      left: 0px;
+                      font-size: 2em;
+                      opacity: .3;
+                      ">&#xf004;
+            </i> </span>
+            <span style = "display: inline-block;
+                  transform: scaleX(.6);">           
+               <i class="fa-regular" 
+               style="color: #eeeeec; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: -15px; 
+                      left: 0px;
+                      font-size: 2em;
+                      opacity: .3;
+                      ">&#xf004;
+            </i> </span>
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 240deg;
+                      width: 45px;
+                      top: 110px; 
+                      left: 0px;
+                      opacity: .3;">
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 80deg;
+                      width: 60px;
+                      top: 3px; 
+                      left: 83px;
+                      opacity:.3">
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 70deg;
+                      width: 65px;
+                      top: 145px; 
+                      left: 75px;
+                      opacity: .3;">
+              <div 
+              style="
+              position:absolute; 
+              top: 40px;
+              left: 25px;
+              "> 
+            </div>
             <div 
               style="
               position:absolute; 
@@ -594,6 +697,134 @@
                   ">
                   {{ cardText }}</pre> </div>             </div>
           <div v-else-if="cardType === 3" class="card-type-3-back">
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -6px; 
+                  left: -15px;
+                  font-size: 9.5em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #277dfe; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -2px; 
+                  left: -11px;
+                  font-size: 9em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #a9cbfe; 
+                  position: absolute;
+                  rotate: -20deg;
+                  top: 60px; 
+                  left: -10px;
+                  font-size: 8.5em;
+                  opacity: .2;
+                  ">&#xf186;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 5px; 
+                  left: 65px;
+                  font-size: 2.5em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #70a9fe; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 8.5px; 
+                  left: 68px;
+                  font-size: 2.1em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 95px; 
+                  left: 65px;
+                  font-size: 3.5em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #70a9fe; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 98px; 
+                  left: 68px;
+                  font-size: 3.1em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 105px; 
+                  left: 25px;
+                  font-size: 1.9em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #70a9fe; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 108px; 
+                  left: 27.5px;
+                  font-size: 1.6em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 150px; 
+                  left: 85px;
+                  font-size: 3em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #277dfe; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 153.5px; 
+                  left: 88px;
+                  font-size: 2.6em;
+                  opacity: .2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 120px; 
+                  left: 35px;
+                  font-size: 1.5em;
+                  opacity: .2;">&#x2a;
+            </i>
+            <i class="fa-regular" 
+            style="color: #a9cbfe; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 10px; 
+                  left: 105px;
+                  font-size: 1.5em;
+                  opacity: .2;">&#x2a;
+            </i>
             <div 
               style="
               position:absolute; 
@@ -610,6 +841,102 @@
                   {{ cardText }}</pre> </div>          
                 </div>
           <div v-else-if="cardType === 4" class="card-type-4-back">
+            <span style = "display: inline-block;
+                  transform: scaleX(0.5);">            
+               <i class="fa-solid" 
+               style="color: #599afd; 
+                      position: absolute;
+                      rotate: 10deg;
+                      top: -20px; 
+                      left: -12px;
+                      font-size: 11.5em;
+                      opacity:.3;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(1.2);">           
+               <i class="fa-solid" 
+               style="color: #599afd; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 60px; 
+                      left: 20px;
+                      font-size: 5em;
+                      opacity:.3;
+                      ">&#xf004;
+            </i> </span>
+            <span style = "display: inline-block;
+                  transform: scaleX(0.5);">            
+               <i class="fa-solid" 
+               style="color: #bad5fe; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 90px; 
+                      left: 130px;
+                      font-size: 6em;
+                      opacity:.3;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(0.4);">            
+               <i class="fa-regular" 
+               style="color: #024ec1; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: 60px; 
+                      left: -10px;
+                      font-size: 6em;
+                      opacity:.3;
+                      ">&#xf004;
+            </i></span>
+            <span style = "display: inline-block;
+                  transform: scaleX(.6);">           
+               <i class="fa-solid" 
+               style="color: #bad5fe; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: -15px; 
+                      left: 0px;
+                      font-size: 2em;
+                      opacity:.3;
+                      ">&#xf004;
+            </i> </span>
+            <span style = "display: inline-block;
+                  transform: scaleX(.6);">           
+               <i class="fa-regular" 
+               style="color: #eeeeec; 
+                      position: absolute;
+                      rotate: 15deg;
+                      top: -15px; 
+                      left: 0px;
+                      font-size: 2em;
+                      opacity:.3;
+                      ">&#xf004;
+            </i> </span>
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 240deg;
+                      width: 45px;
+                      top: 110px; 
+                      left: 0px;
+                      opacity:.3;">
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 80deg;
+                      width: 60px;
+                      top: 3px; 
+                      left: 83px;
+                      opacity:.3;">
+            <img src="./icons/spiral(5).png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 70deg;
+                      width: 65px;
+                      top: 145px; 
+                      left: 75px;
+                      opacity:.3;">
             <div 
               style="
               position:absolute; 
@@ -626,6 +953,135 @@
                   {{ cardText }}</pre> </div>
           </div>
           <div v-else-if="cardType === 5" class="card-type-5-back">
+            <i class="fa-regular" 
+            style="color: #d32d08; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -6px; 
+                  left: -15px;
+                  font-size: 9.5em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #ffb3ab; 
+                  position: absolute;
+                  rotate: 10deg;
+                  top: -2px; 
+                  left: -11px;
+                  font-size: 9em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #f9866d; 
+                  position: absolute;
+                  rotate: -20deg;
+                  top: 60px; 
+                  left: -10px;
+                  font-size: 8.5em;
+                  opacity:.2;
+                  ">&#xf186;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 5px; 
+                  left: 65px;
+                  font-size: 2.5em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #fde1db; 
+                  position: absolute;
+                  rotate: 186deg;
+                  top: 8.5px; 
+                  left: 68px;
+                  font-size: 2.1em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 95px; 
+                  left: 65px;
+                  font-size: 3.5em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #fde1db; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 98px; 
+                  left: 68px;
+                  font-size: 3.1em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 105px; 
+                  left: 25px;
+                  font-size: 1.9em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #fde1db; 
+                  position: absolute;
+                  rotate: -15deg;
+                  top: 108px; 
+                  left: 27.5px;
+                  font-size: 1.6em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #d32d08; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 150px; 
+                  left: 85px;
+                  font-size: 3em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-solid" 
+            style="color: #ffb3ab; 
+                  position: absolute;
+                  rotate: 17deg;
+                  top: 153.5px; 
+                  left: 88px;
+                  font-size: 2.6em;
+                  opacity:.2;
+                  ">&#xf005;
+                  </i>
+            <i class="fa-regular" 
+            style="color: #eeeeec; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 120px; 
+                  left: 35px;
+                  font-size: 1.5em;
+                  opacity:.2;
+                  ">&#x2a;
+            </i>
+            <i class="fa-regular" 
+            style="color: #d32d08; 
+                  position: absolute; 
+                  rotate: 30deg;
+                  top: 10px; 
+                  left: 105px;
+                  font-size: 1.5em;
+                  opacity:.2;">&#x2a;
+            </i>
             <div 
               style="
               position:absolute; 
