@@ -126,6 +126,8 @@ export default {
       </div>
     </div>
   </div>
+  <a style="color:black; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by Smashicons - Flaticon; </a>
+  <a style="color:black; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by BomSymbols - Flaticon; </a>
 </div>
 </template>
 
