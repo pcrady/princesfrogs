@@ -18,8 +18,20 @@ export default {
       this.grid[x][y].visible = false;
     },
     async finalMethod() {
-      await new Promise(r => setTimeout(r, 2000));
-      this.showEndStuff = true;  
+      await new Promise(r => setTimeout(r, 1000));
+      this.showYouFoundYourPrince = true;  
+      await new Promise(r => setTimeout(r, 1000));
+      this.showYouFoundYourPrince = false;
+      await new Promise(r => setTimeout(r, 1000));
+      this.showMaddie = true;  
+      await new Promise(r => setTimeout(r, 1000));
+      this.showHeart = true; 
+      await new Promise(r => setTimeout(r, 1000));
+      this.showCrowns = true; 
+      await new Promise(r => setTimeout(r, 1000));
+      this.showCongrats = true; 
+      await new Promise(r => setTimeout(r, 1000));
+      this.showDate = true; 
     },
     async selectCard(x, y) {
       if (this.lastVisibleRow === null) {
@@ -61,10 +73,14 @@ export default {
   data() {
     return {
       showEntryText: true,
-      entryText: "This is the entry text you want to display.",
       lastVisibleRow: null,
       locked: false,
-      showEndStuff: false,
+      showMaddie: false,
+      showHeart: false, 
+      showCrowns: false,
+      showCongrats: false,
+      showYouFoundYourPrince: false,
+      showDate: false,
       grid: [
         [
           {'flipped': false, 'visible': true, 'cardType':1},
@@ -112,8 +128,24 @@ export default {
   <div>
     <div v-if="showEntryText" class="overlay-container">
       <div class="overlay-text">
-        <p>{{ entryText }}</p>
-        <button @click="hideEntryText">Ok</button>
+        <div>            
+            <img src="./components/icons/princesfrogs-big.png" 
+                 style=" 
+                      position: relative; 
+                      rotate: 0;
+                      width: 400px;
+                      left: 0px;"></div>
+            <i class="fa-solid" 
+               style="color: #ffb302; 
+                      rotate: 0deg; 
+                      position: relative; 
+                      top: -249px; 
+                      left: -100px;
+                      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Create the outline */
+                      font-size:3.5em;">&#xf521;
+            </i>
+            <p style="position:relative; top:-100px;">Find your Prince today!<br>Choose one guy to dump each round until you've got your guy. <br>Click on the first row to get started! </p>
+        <button style="position:relative; top:-90px;" @click="hideEntryText">Ok</button>
       </div>
     </div>
   <div class="grid">
@@ -132,14 +164,105 @@ export default {
         </card>
       </div>
     </div>
-    <div v-if="showEndStuff" style="position:absolute; top:-0px; left:-150px; " class="fade-element">
-        <card :isFlipped="true" 
-              :isVisible="true"
-              :cardType=6></card>
+    <Transition>
+    <div v-if="showYouFoundYourPrince"
+      style="
+        position:absolute; 
+        top:250px; 
+        left:-120px;
+        width: 300%;
+        height: 100%s"
+      class="fade-element">
+          <p style="font-size:3em; 
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: bold;
+          color: #31b73e">You Found Your Prince!</p>
     </div>
+  </Transition>
+    <Transition>
+    <div v-if="showMaddie"
+      style="
+        position:absolute; 
+        top:-0px; 
+        left:-150px;"
+      class="fade-element">
+          <card :isFlipped="true" 
+                :isVisible="true"
+                :cardType=6></card>
+    </div>
+  </Transition>
+  <Transition>
+    <div v-if="showHeart"
+      style="
+        position:absolute; 
+        top:-150px; 
+        left:-290px;"
+      class="fade-element">
+      <i class="fa-regular" 
+               style="color: #4b006e; font-size:40em">&#xf004;
+            </i>
+    </div>
+  </Transition>
+  <Transition>
+    <div v-if="showHeart"
+      style="
+        position:absolute; "
+      class="fade-element">
+      <i class="fa-solid" 
+               style="color: #ffb302; 
+                      rotate: 15deg; 
+                      position: absolute; 
+                      top: -30px; 
+                      left: 29px;
+                      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Create the outline */
+                      font-size:7em;">&#xf521;
+            </i>
+            <i class="fa-solid" 
+               style="color: #ffb302; 
+                      rotate: -10deg; 
+                      position: absolute; 
+                      top: -20px; 
+                      left: -110px;
+                      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Create the outline */
+                      font-size:7em;">&#xf521;
+            </i>
+    </div>
+  </Transition>
+  <Transition>
+    <div v-if="showCongrats"
+      style="
+        position:absolute; 
+        top:250px; 
+        left:-325px;
+        width: 400%;
+        height: 100%s"
+      class="fade-element">
+          <p style="font-size:3em; 
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: bold;
+          text-align: center;
+          color: #31b73e">Congratulations<br>Maddie and Colt!</p>
+    </div>
+  </Transition>
+  <Transition>
+    <div v-if="showDate"
+      style="
+        position:absolute; 
+        top:-90px; 
+        left:-330px;
+        width: 400%;
+        height: 100%s"
+      class="fade-element">
+          <p style="font-size:3em; 
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: bold;
+          text-align: center;
+          color: #31b73e">October 7, 2023</p>
+    </div>
+  </Transition>
   </div>
-  <a style="color:lightgray; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by Smashicons - Flaticon; </a>
-  <a style="color:lightgray; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by BomSymbols - Flaticon; </a>
+  <a style="position: fixed; bottom: 10px; left: 0; color:lightgray; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by Smashicons - Flaticon; </a>
+  <a style="position: fixed; bottom: 0; left: 0; color:lightgray; font-size:xx-small" href="https://www.flaticon.com/free-icons/spiral" title="spiral icons">Spiral icons created by BomSymbols - Flaticon; </a>
 </div>
 </template>
 
@@ -177,7 +300,24 @@ export default {
   background-color: #fa8128; /* White background for the text box */
   padding: 20px;
   border-radius: 5px;
+  width: 500px;
+  height: 400px;
   text-align: center;
 }
+
+body {
+  background-color: #f1e3a4;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 </style>
 
