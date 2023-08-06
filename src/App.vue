@@ -48,9 +48,14 @@ export default {
       }
       this.locked = false;
     },
+    hideEntryText() {
+      this.showEntryText = false;
+    },
   },
   data() {
     return {
+      showEntryText: true,
+      entryText: "This is the entry text you want to display.",
       lastVisibleRow: 0,
       locked: false,
       grid: [
@@ -97,7 +102,14 @@ export default {
 </script>
 
 <template>
-  <div class="grid" style="background-color: faf9d0;">
+  <div>
+    <div v-if="showEntryText" class="overlay-container">
+      <div class="overlay-text">
+        <p>{{ entryText }}</p>
+        <button @click="hideEntryText">Ok</button>
+      </div>
+    </div>
+  <div class="grid">
     <div v-for="(row, x) in grid" class="row">
       <div v-for="(cell, y) in row" class="column">
         <card :isFlipped="cell.flipped" 
@@ -114,12 +126,14 @@ export default {
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <style>
 .grid {
   display: flex;
   flex-direction: column;
+  /* background-color: #fa8128; */
 }
 
 .row {
@@ -128,6 +142,27 @@ export default {
 
 .column {
   flex: 1;
+}
+
+/* Styles for the main website content and other components */
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:999;
+}
+
+.overlay-text {
+  background-color: #fa8128; /* White background for the text box */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
 }
 </style>
 

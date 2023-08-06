@@ -542,6 +542,31 @@
                   font-size:small;">
                   If you saw him in<br>his sports glory<br>he'd be...</p></div>
           </div>
+          <div>            
+            <img src="./icons/princesfrogs-big.png" 
+                 style=" 
+                      position: absolute; 
+                      rotate: 0;
+                      width: 80px;
+                      top: 165px; 
+                      left: 0px;"></div>
+            <!-- <i class="fa-solid" 
+               style="color: #000000; 
+                      rotate: 0deg; 
+                      position: absolute; 
+                      top: 159px; 
+                      left: 10px;
+                      font-size:1.1em;">&#xf521;
+            </i> -->
+            <i class="fa-solid" 
+               style="color: #ffb302; 
+                      rotate: 0deg; 
+                      position: absolute; 
+                      top: 165px; 
+                      left: 10.7px;
+                      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Create the outline */
+                      font-size:.7em;">&#xf521;
+            </i>
         </div>
         <div class="card__face card__face--back">
           <div v-if="cardType === 1" class="card-type-1-back">
